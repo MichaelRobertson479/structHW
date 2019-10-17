@@ -6,6 +6,7 @@ struct monster { char *name; int atk; };
 
 struct monster example() {
 
+	time_t t;
 	srand((unsigned) time(&t));
 
 	char* names[] = {"blue-eyes white dragon","dark magician","relinquished"};
