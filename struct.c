@@ -12,7 +12,7 @@ struct monster example() {
 	int a = rand();
 	int b = rand();
 
-	ex.name = alph[a] + alph[b];
+	ex.name = alph[1] + alph[1];
 	ex.atk = rand();
 
 	return ex;	
