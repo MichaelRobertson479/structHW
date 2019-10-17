@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct monster { int atk; char name[]; };
+struct monster { char *name; int atk; };
 
 struct monster example() {
 
@@ -14,7 +14,7 @@ struct monster example() {
 	//int b = rand();
 
 	//printf("alph1:%s\n",alph[1]);
-	ex.name="example";
+	ex.name="example" + alph[0];
 	ex.atk = rand();
 
 	return ex;	
