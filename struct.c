@@ -6,20 +6,12 @@ struct monster { char *name; int atk; };
 
 struct monster example() {
 
-	char alph[26] = "abcdefghijklmnopqrstuvwxyz";
+	char* names[] = {"blue-eyes white dragon","dark magician","relinquished"};
 	
 	struct monster ex;
-	
-	//int a = rand();
-	//int b = rand();
 
-	for (int i = 0; i < 10; i++) {
-
-		*(ex.name+i) = 'a';
-	}
-
-	//ex.name="example";
-	ex.atk = rand();
+	ex.name = names[rand() % 3];	
+	ex.atk = rand() % 3000;
 
 	return ex;	
 }
