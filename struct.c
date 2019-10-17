@@ -5,14 +5,16 @@ struct monster { char *name; int atk; };
 
 struct monster example() {
 
-	char *alph = "abcdefghijklmnopqrstuvwxyz";
+	//char *alph = "abcdefghijklmnopqrstuvwxyz";
 	
 	struct monster ex;
 	
-	int a = rand();
-	int b = rand();
+	//int a = rand();
+	//int b = rand();
 
-	ex.name[0] = alph[1];
+	//ex.name[0] = alph[1];
+
+	ex.name = "example"
 	ex.atk = rand();
 
 	return ex;	
