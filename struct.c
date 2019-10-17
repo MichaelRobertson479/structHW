@@ -14,7 +14,7 @@ struct monster example() {
 
 	//ex.name[0] = alph[1];
 
-	ex.name = "example"
+	ex.name = "example";
 	ex.atk = rand();
 
 	return ex;	
