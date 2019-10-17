@@ -11,7 +11,7 @@ struct monster example() {
 	struct monster ex;
 
 	ex.name = names[rand() % 3];	
-	ex.atk = ((rand() % 3001) / 10) * 10;
+	ex.atk = ((rand() % 3001) / 100) * 100;
 
 	return ex;	
 }
