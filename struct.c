@@ -25,10 +25,10 @@ int print (struct monster mon) {
 	return 0;
 }
 
-int modify (struct monster mon) {
+int modify (struct monster *mon) {
 
-	mon.name = "changed";
-	mon.atk = 42;
+	(*mon).name = "changed";
+	(*mon).atk = 42;
 
 	return 0;
 }
