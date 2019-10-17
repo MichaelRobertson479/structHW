@@ -38,7 +38,7 @@ int main() {
 	struct monster mon = example();
 	print(mon);
 
-	modify(mon);	
+	modify(*mon);	
 	print(mon);
 
 	return 0;
