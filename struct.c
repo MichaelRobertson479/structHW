@@ -26,7 +26,7 @@ int main() {
 
 	char *string = "abcd";
 
-	printf("%s\n",string[1]);
+	printf("%s\n",*string[1]);
 
 	print(example());
 
