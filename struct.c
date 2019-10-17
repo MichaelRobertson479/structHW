@@ -13,8 +13,7 @@ struct monster example() {
 	//int a = rand();
 	//int b = rand();
 
-	//printf("alph1:%s\n",alph[1]);
-	ex.name="example" + alph[0];
+	ex.name="example";
 	ex.atk = rand();
 
 	return ex;	
