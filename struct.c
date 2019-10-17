@@ -9,7 +9,10 @@ struct monster example() {
 	
 	struct monster ex;
 	
-	ex.name = alph[rand()] + alph[rand()];
+	int a = rand();
+	int b = rand();
+
+	ex.name = alph[a] + alph[b];
 	ex.atk = rand();
 
 	return ex;	
@@ -23,10 +26,6 @@ int print (struct monster mon) {
 }
 
 int main() {
-
-	char *string = "abcd";
-
-	printf("%c\n",string[1]);
 
 	print(example());
 
