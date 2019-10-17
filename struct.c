@@ -36,7 +36,9 @@ int modify (struct monster mon) {
 int main() {
 
 	struct monster mon = example();
+	print(mon);
 
+	modify(mon);	
 	print(mon);
 
 	return 0;
