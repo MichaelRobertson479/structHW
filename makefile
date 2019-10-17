@@ -1,7 +1,7 @@
-all: main.o
+all: struct.o
 	gcc -o program main.o
 
-main.o: struct.c
+struct.o: struct.c
 	gcc -c struct.c
 
 run: 
