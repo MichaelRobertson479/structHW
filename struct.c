@@ -13,7 +13,7 @@ struct monster example() {
 	struct monster ex;
 
 	ex.name = names[rand() % 3];	
-	ex.atk = ((rand() % 3001) / 100) * 100;
+	ex.atk = ((rand() % 3100) / 100) * 100;
 
 	return ex;	
 }
@@ -21,6 +21,14 @@ struct monster example() {
 int print (struct monster mon) {
 
 	printf("name:%s\natk:%d\n",mon.name,mon.atk);
+
+	return 0;
+}
+
+int modify (struct monster mon) {
+
+	mon.name = "changed";
+	mon.atk = 42;
 
 	return 0;
 }
