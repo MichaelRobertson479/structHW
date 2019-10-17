@@ -10,8 +10,8 @@ struct monster example() {
 	
 	struct monster ex;
 
-	ex.name = names[rand() % 3];	
-	ex.atk = ((rand() % 3001) / 100) * 100;
+	ex.name = names[srand() % 3];	
+	ex.atk = ((srand() % 3001) / 100) * 100;
 
 	return ex;	
 }
