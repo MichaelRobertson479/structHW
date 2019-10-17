@@ -18,26 +18,24 @@ struct monster example() {
 	return ex;	
 }
 
-int print (struct monster mon) {
+void print (struct monster mon) {
 
 	printf("name:%s\natk:%d\n",mon.name,mon.atk);
-
-	return 0;
 }
 
-int modify (struct monster *mon) {
+void modify (struct monster *mon) {
 
 	(*mon).name = "changed";
 	(*mon).atk = 42;
-
-	return 0;
 }
 
 int main() {
 
+	printf("Creating + Printing Example Monster:\n");
 	struct monster mon = example();
 	print(mon);
 
+	printf("Modifying + Printing Above Monster:\n");
 	modify(&mon);	
 	print(mon);
 
