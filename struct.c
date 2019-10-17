@@ -5,7 +5,7 @@ struct monster { char *name; int atk; };
 
 struct monster example() {
 
-	char *alph = "abcdefghijklmnopqrstuvwxyz";
+	char alph[26] = "abcdefghijklmnopqrstuvwxyz";
 	
 	struct monster ex;
 	
