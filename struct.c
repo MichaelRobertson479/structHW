@@ -13,7 +13,12 @@ struct monster example() {
 	//int a = rand();
 	//int b = rand();
 
-	ex.name="example";
+	for (int i = 0; i < 10; i++) {
+
+		*(ex.name+i) = 'a';
+	}
+
+	//ex.name="example";
 	ex.atk = rand();
 
 	return ex;	
