@@ -3,13 +3,28 @@
 
 struct monster { char *name; int atk; };
 
+struct monster example() {
+
+	char *alph = "abcdefghijklmnopqrstuvwxyz";
+	
+	struct monster ex;
+	
+	ex.name = alph[rand()] + alph[rand()];
+	ex.atk = rand();
+
+	return ex;	
+}
+
+int print (struct monster mon) {
+
+	printf("name:%s\natk:%d\n",mon.name,mon.atk);
+
+	return 0;
+}
+
 int main() {
-
-	struct monster blue_eyes;
-	blue_eyes.name = "blue eyes white dragon";
-	blue_eyes.atk = 3000;
-
-	printf("name:%s\natk:%d\n",blue_eyes.name,blue_eyes.atk);
+	
+	print(example());
 
 	return 0;
 }
