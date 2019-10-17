@@ -6,12 +6,14 @@ struct monster { char *name; int atk; };
 
 struct monster example() {
 
+	srand((unsigned) time(&t));
+
 	char* names[] = {"blue-eyes white dragon","dark magician","relinquished"};
 	
 	struct monster ex;
 
-	ex.name = names[srand() % 3];	
-	ex.atk = ((srand() % 3001) / 100) * 100;
+	ex.name = names[rand() % 3];	
+	ex.atk = ((rand() % 3001) / 100) * 100;
 
 	return ex;	
 }
@@ -25,7 +27,9 @@ int print (struct monster mon) {
 
 int main() {
 
-	print(example());
+	struct monster mon = example();
+
+	print(mon);
 
 	return 0;
 }
