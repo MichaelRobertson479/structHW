@@ -14,7 +14,6 @@ struct monster example() {
 	//int b = rand();
 
 	printf("alph1:%s\n",alph[1]);
-	//strcpy(ex.name, alph[1]);
 	ex.name="example";
 	ex.atk = rand();
 
