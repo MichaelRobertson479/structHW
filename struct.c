@@ -23,7 +23,11 @@ int print (struct monster mon) {
 }
 
 int main() {
-	
+
+	char *string = "abcd";
+
+	printf("%s\n",string[1]);
+
 	print(example());
 
 	return 0;
