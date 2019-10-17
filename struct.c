@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct monster { char name[]; int atk; };
+struct monster { int atk; char name[]; };
 
 struct monster example() {
 
