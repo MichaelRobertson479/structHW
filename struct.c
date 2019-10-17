@@ -1,13 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <time.h>
 
 struct monster { char *name; int atk; };
 
 struct monster example() {
 
-	time_t t;
-	srand((unsigned) time(&t));
+	srand(time(0));
 
 	char* names[] = {"blue-eyes white dragon","dark magician","relinquished"};
 	
