@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 struct monster { char *name; int atk; };
 
@@ -12,7 +13,7 @@ struct monster example() {
 	//int a = rand();
 	//int b = rand();
 
-	ex.name = alph[1];
+	strcpy(ex.name, alph[1]);
 	ex.atk = rand();
 
 	return ex;	
