@@ -46,7 +46,7 @@ int main() {
     printf("Printing empty list:\n");
     print_list(list);
 
-    printf("Adding #s 0-9 to list.\n")
+    printf("Adding #s 0-9 to list.\n");
     int i;
     for(i = 0; i < 10; i++) {
         list = insert_front(list,i);
