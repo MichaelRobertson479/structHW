@@ -7,7 +7,7 @@ void print_list (struct node *list) {
 
     printf("[ ");
 
-    while (list->next != NULL) {
+    while (list != NULL) {
         printf("%d ",list->i);
         list = list->next;
     }
@@ -41,7 +41,7 @@ struct node * free_list (struct node *list) {
 
 int main() {
 
-    struct node *list;
+    struct node *list = NULL;
 
     printf("Printing empty list:\n");
     print_list(list);
