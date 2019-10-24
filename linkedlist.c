@@ -9,7 +9,7 @@ void print_list (struct node *list) {
 
     while (list != NULL) {
         printf("%d ",list->i);
-        list->next;
+        list = list->next;
     }
 
     printf("]\n");
@@ -32,6 +32,7 @@ struct node * free_list (struct node *list) {
     while (list != NULL) {
 
         next = list->next;
+        printf("freeing node: %d\n",list->i);
         free(list);
         list = next;
     }
@@ -52,6 +53,11 @@ int main() {
         list = insert_front(list,i);
     }
 
+    printf("Printing list:\n");
+    print_list(list);
+
+    printf("Freeing list.\n");
+    list = free_list(list);
     printf("Printing list:\n");
     print_list(list);
 
