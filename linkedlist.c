@@ -9,7 +9,7 @@ void print_list (struct node *list) {
 
     while (list != NULL) {
         printf("%d ",list->i);
-        list = list->next;
+        list->next;
     }
 
     printf("]\n");
