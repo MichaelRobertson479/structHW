@@ -15,11 +15,11 @@ void print_list (struct node *list) {
     printf("]\n");
 }
 
-struct node * insert_front (struct node *list, int n) {
+struct node * insert_front (struct node *list, int data) {
 
     struct node *new = malloc(1 * sizeof(struct node));
     
-    new->i = n;
+    new->i = data;
     new->next = list;
 
     return new;
@@ -40,6 +40,30 @@ struct node * free_list (struct node *list) {
     return list;
 }
 
+struct node * remove_node (struct node *list, int data) {
+
+	return list;
+
+}
+
+struct int find_node (struct node *list, int data) {
+
+	int index = 0;
+
+	while (list != NULL) {
+
+		if (list->i == data) {
+
+			return index;
+		}
+
+		index++;
+		list = list->next;
+	}
+
+	return -1;
+}
+
 int main() {
 
     struct node *list = NULL;
@@ -55,6 +79,9 @@ int main() {
 
     printf("Printing list:\n");
     print_list(list);
+
+    printf("Printing index of element 5:%d\n",find_node(list,5));
+    printf("Printing index of element 10:%d\n",find_node(list,10));
 
     printf("Freeing list.\n");
     list = free_list(list);
