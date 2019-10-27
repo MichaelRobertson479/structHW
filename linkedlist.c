@@ -143,17 +143,20 @@ int main() {
     print_list(list);
 
     printf("Removing 9:\n");
-    print_list(remove_node(list,9));
+    list = remove_node(list,9);
+    print_list(list);
 
     printf("Removing 4:\n");
-    print_list(remove_node(list,4));
+    list = remove_node(list,4)
+    print_list(list);
 
     printf("Removing 0:\n");
-    
-    print_list(remove_node(list,0));
+    list = remove_node(list,0);
+    print_list(list);
 
     printf("Removing -1:\n");
-    print_list(remove_node(list,-1));
+    list = remove_node(list,-1);
+    print_list(list);
 
     printf("Freeing list.\n");
     list = free_list(list);
