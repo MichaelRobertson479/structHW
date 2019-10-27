@@ -46,7 +46,7 @@ struct node * remove_node (struct node *list, int data) {
 
 }
 
-struct int find_node (struct node *list, int data) {
+int find_node (struct node *list, int data) {
 
 	int index = 0;
 
