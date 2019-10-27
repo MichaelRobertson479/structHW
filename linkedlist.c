@@ -147,7 +147,7 @@ int main() {
     print_list(list);
 
     printf("Removing 4:\n");
-    list = remove_node(list,4)
+    list = remove_node(list,4);
     print_list(list);
 
     printf("Removing 0:\n");
