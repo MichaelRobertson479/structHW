@@ -40,10 +40,71 @@ struct node * free_list (struct node *list) {
     return list;
 }
 
+struct node *remove_node (struct node *list, int data) {
+
+    if (list->i == data) {
+        
+        struct node *next = list->next;
+
+        free(list);
+
+        return next;
+    }
+
+    else {
+
+        struct node *curr = list->next;
+        struct node *prev = list;
+
+        while (curr != NULL) {
+
+            if (curr->i == data) {
+                
+                prev->next = curr->next;
+                
+                free(curr);
+
+                return list;
+            }
+
+            curr = curr->next;
+            prev = prev->next;
+        }
+    
+        return list;
+    }
+
+}
+
+/*
 struct node * remove_node (struct node *list, int data) {
 
-	return list;
+	int index = find_node(list,data);
 
+	if (index == -1) {
+
+		return list;
+	}
+
+	else if (index == 0) {
+
+		struct node *next = list->next;
+	
+		free(list);
+
+		return next;
+	}
+
+	else {
+
+		int n = 0;
+
+		while (n < index) {
+
+			list = list->next;	
+			n++;
+		}
+	}
 }
 
 int find_node (struct node *list, int data) {
@@ -63,6 +124,7 @@ int find_node (struct node *list, int data) {
 
 	return -1;
 }
+*/
 
 int main() {
 
@@ -80,8 +142,18 @@ int main() {
     printf("Printing list:\n");
     print_list(list);
 
-    printf("Printing index of element 5:%d\n",find_node(list,5));
-    printf("Printing index of element 10:%d\n",find_node(list,10));
+    printf("Removing 9:\n");
+    print_list(remove_node(list,9));
+
+    printf("Removing 4:\n");
+    print_list(remove_node(list,4));
+
+    printf("Removing 0:\n");
+    
+    print_list(remove_node(list,0));
+
+    printf("Removing -1:\n");
+    print_list(remove_node(list,-1));
 
     printf("Freeing list.\n");
     list = free_list(list);
